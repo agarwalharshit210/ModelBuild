@@ -1,0 +1,24 @@
+<!-- your_app/templates/book_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <h1>Books and Authors</h1>
+
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong><br>
+                Author: {{ book.author.name }}<br>
+                Bio: {{ book.author.bio }}<br>
+                Published on: {{ book.publication_date }}
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
